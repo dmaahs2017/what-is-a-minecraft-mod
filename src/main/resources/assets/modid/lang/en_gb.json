@@ -1,0 +1,7 @@
+{
+  "options.modid.enable.title": "Enable Auto Fishing",
+  "options.modid.enable.tooltip": "When enabled the fishing rod will auto reel and recast.",
+
+  "options.modid.toggle.on": "Auto Fishing: On",
+  "options.modid.toggle.off": "Auto Fishing: Off"
+}

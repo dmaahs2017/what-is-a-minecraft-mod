@@ -9,10 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
 public class AutoFishMod implements ClientModInitializer {
-
     private static int recastCount = -1;
-
     public static final Logger LOGGER = LoggerFactory.getLogger("AutoFisher");
+    private static boolean isEnabled = false;
+
 
     public void onInitializeClient() {
         LOGGER.info("Register Client Fish Ticker");
@@ -20,16 +20,28 @@ public class AutoFishMod implements ClientModInitializer {
     }
 
     public static void catchAndRecast() {
-        MinecraftClient client = MinecraftClient.getInstance();
-        client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
+        if (isEnabled) {
+            MinecraftClient client = MinecraftClient.getInstance();
+            client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
 
-        recastCount = 20;
+            recastCount = 20;
+        }
+    }
+
+    public static boolean isEnabled() {
+        return isEnabled;
+    }
+    public static void toggleOnOff() {
+        isEnabled = !isEnabled;
+        recastCount = -1;
     }
     public void fishTicker(MinecraftClient client) {
-        if (recastCount >= 0) {
-            --recastCount;
-            if (recastCount == 0) {
-                client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
+        if (isEnabled) {
+            if (recastCount >= 0) {
+                --recastCount;
+                if (recastCount == 0) {
+                    client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
+                }
             }
         }
     }
