@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.entity.projectile.FishingBobberEntity;
 
 @Mixin(FishingBobberEntity.class)
-public abstract class BobberMixin {
+public class BobberMixin {
 
     @Shadow
     private boolean caughtFish;
