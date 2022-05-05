@@ -1,7 +1,7 @@
-package net.fabricmc.example.mixin;
+package net.fabricmc.autofish.mixin;
 
 
-import net.fabricmc.example.AutoFishMod;
+import net.fabricmc.autofish.AutoFishMod;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

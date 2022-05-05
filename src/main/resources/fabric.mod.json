@@ -19,7 +19,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.fabricmc.example.AutoFishMod"
+      "net.fabricmc.autofish.AutoFishMod"
     ]
   },
   "mixins": [

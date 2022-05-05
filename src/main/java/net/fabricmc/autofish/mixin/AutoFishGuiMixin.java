@@ -1,6 +1,6 @@
-package net.fabricmc.example.mixin;
+package net.fabricmc.autofish.mixin;
 
-import net.fabricmc.example.AutoFishMod;
+import net.fabricmc.autofish.AutoFishMod;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.option.OptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
