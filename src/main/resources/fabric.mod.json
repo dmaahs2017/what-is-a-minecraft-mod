@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "randomod",
   "version": "${version}",
 
   "name": "RandomMod",
@@ -20,10 +20,14 @@
   "entrypoints": {
     "client": [
       "net.fabricmc.autofish.AutoFishMod"
+    ],
+    "main": [
+      "net.fabricmc.newblock.BlockMod"
     ]
   },
   "mixins": [
-    "randomod.mixins.json"
+    "autofish.mixins.json",
+    "blockmod.mixins.json"
   ],
 
   "depends": {
