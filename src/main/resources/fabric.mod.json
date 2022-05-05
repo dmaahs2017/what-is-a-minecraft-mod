@@ -3,10 +3,10 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "RandomMod",
+  "description": "This is a place for me to randomly implement things lmao",
   "authors": [
-    "Me!"
+    "Dalton 'Dabrick' Maahs"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
