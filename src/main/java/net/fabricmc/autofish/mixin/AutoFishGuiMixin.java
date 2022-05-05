@@ -30,8 +30,8 @@ public class AutoFishGuiMixin extends Screen {
 
     public Text genMessageText(boolean isOn) {
         return isOn ?
-                new TranslatableText("options.modid.toggle.on") :
-                new TranslatableText("options.modid.toggle.off");
+                new TranslatableText("options.randomod.toggle.on") :
+                new TranslatableText("options.randomod.toggle.off");
     }
 
     @Inject(at = @At("TAIL"), method = "init")

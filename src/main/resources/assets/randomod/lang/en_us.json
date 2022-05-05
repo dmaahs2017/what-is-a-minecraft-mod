@@ -1,0 +1,7 @@
+{
+  "options.randomod.enable.title": "Enable Auto Fishing",
+  "options.randomod.enable.tooltip": "When enabled the fishing rod will auto reel and recast.",
+
+  "options.randomod.toggle.on": "Auto Fishing: On",
+  "options.randomod.toggle.off": "Auto Fishing: Off"
+}
