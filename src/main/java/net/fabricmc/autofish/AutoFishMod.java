@@ -1,10 +1,10 @@
 package net.fabricmc.autofish;
 
-import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.util.Hand;
-import org.slf4j.LoggerFactory;
+import net.fabricmc.api.*;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.*;
+import net.minecraft.client.*;
+import net.minecraft.util.*;
+import org.slf4j.*;
 
 import org.slf4j.Logger;
 
@@ -31,10 +31,12 @@ public class AutoFishMod implements ClientModInitializer {
     public static boolean isEnabled() {
         return isEnabled;
     }
+
     public static void toggleOnOff() {
         isEnabled = !isEnabled;
         recastCount = -1;
     }
+
     public void fishTicker(MinecraftClient client) {
         if (isEnabled) {
             if (recastCount >= 0) {
