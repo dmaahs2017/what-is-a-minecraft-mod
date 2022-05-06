@@ -11,7 +11,8 @@ import net.minecraft.util.registry.*;
 
 public class BlockMod implements ModInitializer {
 
-    public static final Block NEW_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
+    public static final Block NEW_BLOCK = new HelloWorldBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f));
+    public static final Block FISHING_MOUNT_BLOCK = new FishingMountBlock(FabricBlockSettings.of(Material.DECORATION));
 
     @Override
     public void onInitialize() {
@@ -19,6 +20,12 @@ public class BlockMod implements ModInitializer {
         Registry.register(Registry.ITEM,
             new Identifier("randomod", "newblock"),
             new BlockItem(NEW_BLOCK, new FabricItemSettings().group(ItemGroup.MISC))
+        );
+
+        Registry.register(Registry.BLOCK, new Identifier("randomod", "fishing_pole_mount"), FISHING_MOUNT_BLOCK);
+        Registry.register(Registry.ITEM,
+            new Identifier("randomod", "fishing_pole_mount"),
+            new BlockItem(FISHING_MOUNT_BLOCK, new FabricItemSettings().group(ItemGroup.MISC))
         );
 
 
